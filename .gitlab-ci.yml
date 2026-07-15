@@ -7,8 +7,10 @@ before_script:
   - python --version
   - pip install -r requirements.txt
 
-test_selenium:
+selenium_tests:
   stage: test
+  tags:
+    - selenium
   script:
     - pytest --html=reports/report.html
   artifacts:
