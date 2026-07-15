@@ -6,7 +6,7 @@ def test_login():
 
     driver = DriverFactory.get_driver()
 
-    driver.get("https://www.saucedemo.com")
+    driver.get("https://www.amazon.com")
 
     login_page = LoginPage(driver)
 
