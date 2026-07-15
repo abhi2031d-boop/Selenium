@@ -1,0 +1,17 @@
+image: python:3.12
+
+stages:
+  - test
+
+before_script:
+  - python --version
+  - pip install -r requirements.txt
+
+test_selenium:
+  stage: test
+  script:
+    - pytest --html=reports/report.html
+  artifacts:
+    when: always
+    paths:
+      - reports/
